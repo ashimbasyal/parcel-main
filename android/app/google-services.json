@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "46706312723",
+    "project_id": "parcel-566bd",
+    "storage_bucket": "parcel-566bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46706312723:android:90794eed35823139d5a1e6",
+        "android_client_info": {
+          "package_name": "com.parcel.riderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46706312723-f63i6cs1qr1j41k0nkmeh5746qco22q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN-WEKnffcQjE8HrYB7CS2bwMPYp69Tvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46706312723-f63i6cs1qr1j41k0nkmeh5746qco22q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46706312723:android:a944e4aa63d3a7e7d5a1e6",
+        "android_client_info": {
+          "package_name": "com.parcel.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46706312723-f63i6cs1qr1j41k0nkmeh5746qco22q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN-WEKnffcQjE8HrYB7CS2bwMPYp69Tvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46706312723-f63i6cs1qr1j41k0nkmeh5746qco22q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
