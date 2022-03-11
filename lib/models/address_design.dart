@@ -13,7 +13,7 @@ class AddressDesign extends StatefulWidget {
   final String addressID;
   final String userID;
 
-  AddressDesign(
+  AddressDesign(  
       {this.model, this.currentIndex, this.value, this.addressID, this.userID});
 
   @override
@@ -117,7 +117,7 @@ class _AddressDesignState extends State<AddressDesign> {
               ),
               style: ElevatedButton.styleFrom(primary: Colors.black54),
               onPressed: () {
-                // MapsUtils.openMapWithAddress(widget.model.fullAddress);
+                MapsUtils.openMapWithAddress(widget.model.fullAddress);
               },
             ),
 

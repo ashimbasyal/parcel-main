@@ -31,7 +31,7 @@ class _DetailsState extends State<Details> {
 
     if (_isInit) {
       dtails = FirebaseFirestore.instance
-          .collection('rider')
+          .collection('users')
           .doc(widget.documentId)
           .get()
           .then((DocumentSnapshot documentSnapshot) {
@@ -69,7 +69,7 @@ class _DetailsState extends State<Details> {
                 padding: const EdgeInsets.all(8),
                 child: Center(
                   child: Text(
-                    "Order Id : $ord",
+                    "Order Id :$ord",
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -118,3 +118,8 @@ class _DetailsState extends State<Details> {
     );
   }
 }
+
+
+
+
+

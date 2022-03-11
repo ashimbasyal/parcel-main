@@ -41,7 +41,7 @@ class SaveAddressScreen extends StatelessWidget {
     _state.text = '${pMark.country}';
     _completeAddress.text = fulAddress;
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +79,7 @@ class SaveAddressScreen extends StatelessWidget {
               lng: position.longitude,
             ).toJson();
             FirebaseFirestore.instance
-                .collection("rider")
+                .collection("users")
                 .doc(DateTime.now().microsecondsSinceEpoch.toString())
                 .set(model)
                 .then((value) {

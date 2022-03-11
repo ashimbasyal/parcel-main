@@ -4,6 +4,13 @@ import 'package:parcel_sellerapp/homepage/home.dart';
 import 'package:parcel_sellerapp/maps/mapsutl.dart';
 
 class DropLocation extends StatefulWidget {
+  double dlat;
+  double dlng;
+  double slat;
+  double slng;
+
+  
+
   @override
   State<DropLocation> createState() => _DropLocationState();
 }
@@ -46,8 +53,8 @@ class _DropLocationState extends State<DropLocation> {
           ),
           GestureDetector(
             onTap: () {
-              // MApUtils.launchMapFromSourceToDestination(
-              //     27.5966807, 85.1563199, 'New', 'Baneshwor');
+              MApUtils.launchMapFromSourceToDestination(
+                  27.5966807, 85.1563199, 'New', 'Baneshwor');
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:parcel_sellerapp/address/address_mode.dart';
-import 'package:parcel_sellerapp/details/details.dart';
+import 'package:parcel_sellerapp/approvedorder/details.dart';
+import 'package:parcel_sellerapp/maps/maps.dart';
+import 'package:parcel_sellerapp/models/addressmod.dart';
 import 'package:parcel_sellerapp/models/address_changer.dart';
 import 'package:provider/provider.dart';
 
@@ -116,7 +117,7 @@ class _AddressDesignState extends State<AddressDesign> {
               ),
               style: ElevatedButton.styleFrom(primary: Colors.black54),
               onPressed: () {
-                // MapsUtils.openMapWithAddress(widget.model.fullAddress);
+                MapsUtils.openMapWithAddress(widget.model.fullAddress);
               },
             ),
 

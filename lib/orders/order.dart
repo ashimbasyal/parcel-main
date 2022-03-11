@@ -192,21 +192,6 @@ class CartPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
-                      onPressed: () {
-                        Route newRoute = MaterialPageRoute(
-                            builder: (context) => Details(
-                                // documentId: widget.addressID,
-                                ));
-                        Navigator.pushReplacement(context, newRoute);
-                      },
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
-                          minimumSize: const Size(
-                            150,
-                            40,
-                          )),
-                      child: const Text('Accept')),
-                  ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                           primary: Colors.black,

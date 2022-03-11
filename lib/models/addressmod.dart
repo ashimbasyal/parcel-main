@@ -1,5 +1,4 @@
 class Address {
-  String id;
   String name;
   String phoneNumber;
   String flatNumber;
@@ -10,7 +9,6 @@ class Address {
   double lng;
 
   Address({
-    this.id,
     this.name,
     this.phoneNumber,
     this.flatNumber,
@@ -23,7 +21,6 @@ class Address {
 
   factory Address.fromJson(Map<String, dynamic> json) {
     return Address(
-      id: json['id'],
       name: json['name'],
       phoneNumber: json['phoneNumber'],
       flatNumber: json['flatNumber'],
@@ -37,7 +34,6 @@ class Address {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
     data['name'] = name;
     data['phoneNumber'] = phoneNumber;
     data['flatNumber'] = flatNumber;
@@ -50,3 +46,69 @@ class Address {
     return data;
   }
 }
+
+
+// class Address {
+//   final String parcelImageUrl;
+//   final String title;
+//   final String detail;
+//   final String weight;
+//   final String phone;
+//   final String pick;
+//   final String drop;
+//   final String price;
+//   final bool taken;
+//   final bool approved;
+//   final String sellerUID;
+//   final String rid;
+
+//   Address({
+//      this.title,
+//      this.parcelImageUrl,
+//      this.sellerUID,
+//       this.rid,
+//      this.detail,
+//      this.weight,
+//      this.phone,
+//      this.pick,
+//      this.drop,
+//      this.price,
+//      this.taken,
+//      this.approved,
+//   });
+
+//   factory Address.fromJson(Map<String, dynamic> json) {
+//     return Address(
+//         title: json['title'],
+//         detail: json['detail'],
+//         weight: json['weight'],
+//         phone: json['phone'],
+//         pick: json['pick'],
+//         drop: json['drop'],
+//         price: json['price'],
+//         taken: json['taken'],
+//         approved: json['approved'],
+//         sellerUID: json['SellerUID'],
+//         parcelImageUrl: json['parcelImageUrl'],
+//         rid: json['rid']);
+
+
+//   }
+
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = <String, dynamic>{};
+//     data['title'] = title;
+//     data['detail'] = detail;
+//     data['weight'] = weight;
+//     data['phone'] = phone;
+//     data['pick'] = pick;
+//     data['drop'] = drop;
+//     data['price'] = price;
+//     data['taken'] = taken;
+//     data['approved'] = approved;
+//     data['sellerUID'] = sellerUID;
+//     data['parcelImageUrl'] = parcelImageUrl;
+//     data['rid'] = rid;
+//     return data;
+//   }
+// }

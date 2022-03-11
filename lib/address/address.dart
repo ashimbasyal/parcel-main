@@ -65,7 +65,7 @@ class _CurrentAddress extends State<CurrentAddress> {
             return Flexible(
               child: StreamBuilder<QuerySnapshot>(
                   stream: FirebaseFirestore.instance
-                      .collection("rider")
+                      .collection("users")
                       .snapshots(),
                   builder: (context, snapshot) {
                     return !snapshot.hasData

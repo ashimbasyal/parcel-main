@@ -4,21 +4,27 @@ import 'package:parcel_sellerapp/drop_location.dart';
 import 'package:parcel_sellerapp/maps/mapsutl.dart';
 
 class PickupLocation extends StatefulWidget {
+  final String usersId;
+  // var pick = widget.model.pick;
+
+  PickupLocation({this.usersId});
   @override
   State<PickupLocation> createState() => _PickupLocationState();
 }
 
 class _PickupLocationState extends State<PickupLocation> {
+  var data;
   double userLat, userLng;
 
   getUserData() async {
     FirebaseFirestore.instance
-        .collection("user")
-        .doc()
+        .collection("users")
+        .doc(widget.usersId)
         .get()
-        .then((DocumentSnapshot) {
-      DocumentSnapshot.data()['lat'];
-      DocumentSnapshot.data()['lng'];
+        .then((DocumentSnapshot documentSnapshot) {
+      data = documentSnapshot.data();
+      documentSnapshot.data();
+      print(documentSnapshot.data());
     });
   }
 
@@ -46,8 +52,8 @@ class _PickupLocationState extends State<PickupLocation> {
           ),
           GestureDetector(
             onTap: () {
-              // MApUtils.launchMapFromSourceToDestination(
-              //     27.5966807, 85.1563199, 'New', 'Baneshwor');
+              MApUtils.launchMapFromSourceToDestination(
+                  'New', 'Baneshwor', userLat, userLng);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

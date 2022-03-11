@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parcel_sellerapp/authentification/auth_screen.dart';
 import 'package:parcel_sellerapp/cart/cart.dart';
-import 'package:parcel_sellerapp/orders/orders.dart';
-
+import 'package:parcel_sellerapp/orders/order.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,8 +28,8 @@ class _HomePageState extends State<HomePage> {
             }
             if (index == 1) {
               //parcel in progess
-              // Route newRoute = MaterialPageRoute(builder: (_) => OrdersCart());
-              // Navigator.pushReplacement(context, newRoute);
+              Route newRoute = MaterialPageRoute(builder: (_) => OrdersCart());
+              Navigator.pushReplacement(context, newRoute);
             }
             if (index == 2) {
               //Not yet deliver

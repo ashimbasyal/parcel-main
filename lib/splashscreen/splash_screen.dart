@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:parcel_sellerapp/authentification/auth_screen.dart';
+import 'package:parcel_sellerapp/global/global.dart';
 import 'package:parcel_sellerapp/homepage/home.dart';
 
 class MySplashScreen extends StatefulWidget {
@@ -13,21 +13,14 @@ class MySplashScreen extends StatefulWidget {
 }
 
 class _MySplashScreenState extends State<MySplashScreen> {
-  //yesma chai kati bersamma splashscreen dekhauni vanera ho
-
   startTimer() {
-    Timer(const Duration(seconds: 5), () async {
-      {
-        Route newRoute =
-            MaterialPageRoute(builder: (context) => const AuthScreen());
-        Navigator.pushReplacement(context, newRoute);
+    Timer(const Duration(seconds: 2), () async {
+      if (firebaseAuth.currentUser != null) {
+        Navigator.push(context, MaterialPageRoute(builder: (c) => HomePage()));
+      } else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => AuthScreen()));
       }
-
-      // {
-      //   Route newRoute =
-      //       MaterialPageRoute(builder: (context) => const HomePage());
-      //   Navigator.pushReplacement(context, newRoute);
-      // }
     });
   }
 
@@ -46,17 +39,24 @@ class _MySplashScreenState extends State<MySplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/splash.jpg'),
+              Padding(
+                padding: const EdgeInsets.all(70.0),
+                child: Image.asset("assets/images/splash.jpg"),
+              ),
               const SizedBox(
                 height: 10,
               ),
               const Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(18.0),
                 child: Text(
-                  'Parcel Goods Online',
+                  "Post Job requests",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 40, letterSpacing: 3, color: Colors.black),
+                    color: Colors.black54,
+                    fontSize: 40,
+                    fontFamily: "Signatra",
+                    letterSpacing: 3,
+                  ),
                 ),
               )
             ],

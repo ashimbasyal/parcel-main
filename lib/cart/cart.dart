@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:parcel_sellerapp/address/address.dart';
+import 'package:parcel_sellerapp/available_parcel/available.dart';
+import 'package:parcel_sellerapp/available_parcel/available_parcel_details.dart';
 import 'package:parcel_sellerapp/cart/cart_model.dart';
 import 'package:parcel_sellerapp/homepage/home.dart';
 
 class Cart extends StatefulWidget {
-
-
   @override
   _CartState createState() => _CartState();
 }
@@ -19,8 +19,7 @@ class _CartState extends State<Cart> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Route newRoute =
-                MaterialPageRoute(builder: (_) =>  HomePage());
+            Route newRoute = MaterialPageRoute(builder: (_) => HomePage());
             Navigator.pushReplacement(context, newRoute);
           },
         ),
@@ -48,7 +47,7 @@ class CartPage extends StatelessWidget {
   final JobList jobList;
   const CartPage({
     Key key,
-     this.jobList,
+    this.jobList,
   }) : super(key: key);
 
   @override
@@ -186,7 +185,7 @@ class CartPage extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         Route newRoute =
-                            MaterialPageRoute(builder: (_) => CurrentAddress());
+                            MaterialPageRoute(builder: (_) => APDetails());
                         Navigator.pushReplacement(context, newRoute);
                       },
                       style: ElevatedButton.styleFrom(
@@ -196,15 +195,6 @@ class CartPage extends StatelessWidget {
                             40,
                           )),
                       child: const Text('Accept')),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
-                          minimumSize: const Size(
-                            150,
-                            40,
-                          )),
-                      child: const Text('Cancel'))
                 ],
               )
             ],
